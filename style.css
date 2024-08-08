@@ -38,6 +38,7 @@ body {
 body * {
     font-family: "Inter", sans-serif;
     /* color: #ffffff; */
+
     color: var(--text-color);
 }
 
@@ -92,13 +93,21 @@ body * {
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
+
+    animation: slide-back 0.4s;
     /* margin-bottom: 30px; */
     /* background-image: url(./assets/moon-stars.svg); */
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
+    animation: slide-in 0.4s forwards;
+    /* right: 0; */
+    /* left: initial; */
+}
+
+#switch button:hover {
+    outline: 8px solid var(--highlight-color);
+
 }
 
 #switch span {
@@ -178,4 +187,24 @@ footer {
 
 footer a {
     text-decoration: none;
+}
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
+    }
 }
