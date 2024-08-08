@@ -5,9 +5,9 @@ function toggleMode() {
     const img = document.querySelector("#profile img")
 
     if (html.classList.contains("light")) {
-        img.setAttribute("src", "./assets/kakash.jpn.jpg")
+        img.setAttribute("src", "./assets/img_art.luva.jpg")
     } else {
-        img.setAttribute("src", "./assets/naruto.jpeg")
+        img.setAttribute("src", "./assets/img_art.cotovelo.jpeg")
     }
 
 }
